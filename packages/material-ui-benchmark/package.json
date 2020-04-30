@@ -17,7 +17,9 @@
     "server": "cd ../../ && NODE_ENV=production BABEL_ENV=benchmark babel-node packages/material-ui-benchmark/src/server.js --inspect=0.0.0.0:9229",
     "styles": "cd ../../ && NODE_ENV=production BABEL_ENV=benchmark babel-node packages/material-ui-benchmark/src/styles.js --inspect=0.0.0.0:9229",
     "system": "cd ../../ && NODE_ENV=production BABEL_ENV=benchmark babel-node packages/material-ui-benchmark/src/system.js --inspect=0.0.0.0:9229",
-    "test": "exit 0"
+    "test": "exit 0",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -33,6 +35,8 @@
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-jss": "^10.0.0",
-    "styled-system": "^5.1.2"
-  }
+    "styled-system": "^5.1.2",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
