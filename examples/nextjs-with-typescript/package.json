@@ -8,17 +8,21 @@
     "clsx": "latest",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "@types/next": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "typescript": "latest"
-  }
+  },
+  "snyk": true
 }
