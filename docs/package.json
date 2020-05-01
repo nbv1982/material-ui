@@ -14,7 +14,9 @@
     "start": "next start",
     "typescript": "tslint -p tsconfig.json \"src/pages/**/*.{ts,tsx}\"",
     "typescript:transpile": "node scripts/formattedTSDemos",
-    "typescript:transpile:dev": "node scripts/formattedTSDemos --watch"
+    "typescript:transpile:dev": "node scripts/formattedTSDemos --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@babel/core": "^7.6.0",
@@ -119,12 +121,14 @@
     "url-loader": "^2.1.0",
     "webfontloader": "^1.6.28",
     "webpack": "^4.41.0",
-    "webpack-bundle-analyzer": "^3.5.1"
+    "webpack-bundle-analyzer": "^3.5.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.6.0",
     "babel-plugin-unwrap-createstyles": "^4.1.0",
     "cpy-cli": "^2.0.0",
     "gm": "^1.23.0"
-  }
+  },
+  "snyk": true
 }
