@@ -18,12 +18,16 @@
     "react": "latest",
     "react-dom": "latest",
     "webpack": "latest",
-    "webpack-cli": "latest"
+    "webpack-cli": "latest",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "start": "npm-run-all -p build serve",
     "build": "webpack -w",
     "serve": "nodemon --ignore ./build --exec babel-node -- server.js",
-    "production": "cross-env NODE_ENV=production npm start"
-  }
+    "production": "cross-env NODE_ENV=production npm start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
