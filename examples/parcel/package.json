@@ -9,13 +9,17 @@
     "babel-preset-react": "latest",
     "parcel-bundler": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ./"
+    "build": "parcel build src/index.html --public-url ./",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "babel-core": "^6.26.3"
-  }
+  },
+  "snyk": true
 }
